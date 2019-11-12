@@ -1,10 +1,16 @@
 ﻿using System;
- using NLog;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity.Validation;
+using System.Linq;
+using NLog;
+using NorthwindConsole.Models;
 
-    public class CategoryMenu
+public class CategoryMenu
     {
         private string choice;
         ViewCategory view = new ViewCategory();
+        CategoryWithProducts categoryWithProducts = new CategoryWithProducts();
 
 	    public Menu()
 	    {
@@ -22,6 +28,9 @@
                 case ("1"):
                     view.Display();
                     break;
+            case ("3"):
+                categoryWithProducts.View();
+                break;
             }
         }
     }
