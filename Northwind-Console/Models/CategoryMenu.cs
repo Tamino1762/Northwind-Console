@@ -10,6 +10,7 @@ public class CategoryMenu
     {
         private string choice;
         ViewCategory view = new ViewCategory();
+        AddCategory addCategory = new AddCategory();
         CategoryWithProducts categoryWithProducts = new CategoryWithProducts();
 
 	    public Menu()
@@ -28,7 +29,10 @@ public class CategoryMenu
                 case ("1"):
                     view.Display();
                     break;
-            case ("3"):
+                case ("2"):
+                addCategory.Add();
+                break;
+                case ("3"):
                 categoryWithProducts.View();
                 break;
             }
