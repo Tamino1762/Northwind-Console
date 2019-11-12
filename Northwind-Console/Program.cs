@@ -49,7 +49,6 @@ namespace NorthwindConsole
 
                         Console.WriteLine("Enter Category Name:");
                         category.CategoryName = Console.ReadLine();
-
                         Console.WriteLine("Enter the Category Description:");
                         category.Description = Console.ReadLine();
 
