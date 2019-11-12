@@ -12,6 +12,7 @@ public class CategoryMenu
         ViewCategory view = new ViewCategory();
         AddCategory addCategory = new AddCategory();
         CategoryWithProducts categoryWithProducts = new CategoryWithProducts();
+        DisplayAllCat displayAllCat = new DisplayAllCat();
 
 	    public Menu()
 	    {
@@ -28,13 +29,23 @@ public class CategoryMenu
             {
                 case ("1"):
                     view.Display();
+                    logger.Info("Display All Categories.");
                     break;
                 case ("2"):
-                addCategory.Add();
+                    addCategory.Add();
+                    logger.Info("Add a Category.");
                 break;
                 case ("3"):
-                categoryWithProducts.View();
+                    categoryWithProducts.View();
+                    logger.Info("Display Category with Product.");
                 break;
+                case ("4"):
+                    displayAllCat.Display();
+                    logger.Info("Display all Categories with Products.");
+                break;
+                default:
+                    System.Console.WriteLine("Please enter a valid number");
+                    logger.Error("Invaid Entry.");
             }
         }
     }

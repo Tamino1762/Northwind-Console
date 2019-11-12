@@ -3,8 +3,8 @@
 
 public class AddCategory
 {
-	public Add()
-	{
+    public Add()
+    {
         Category category = new Category();
 
         Console.WriteLine("Enter Category Name:");
@@ -27,4 +27,5 @@ public class AddCategory
             }
 
         }
+    }
 }
