@@ -13,6 +13,7 @@ namespace NorthwindConsole
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         public static void Main(string[] args)
         {
+            
             logger.Info("Program started");
             try
             {
@@ -24,10 +25,10 @@ namespace NorthwindConsole
 
                 } while (choice.ToLower() != "q");
             }
-            catch (DbEntityValidationException e)
+            /*catch (DbEntityValidationException e)
             {
                 //specific things here
-            }
+            }*/
             catch (Exception ex)
             {
                 logger.Error(ex.Message);

@@ -1,8 +1,11 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity.Validation;
+using System.Linq;
+using NLog;
+using NorthwindConsole.Models;
 
-/// <summary>
-/// Summary description for Class1
-/// </summary>
 public class DisplayAllCat
 {
 	public Display()

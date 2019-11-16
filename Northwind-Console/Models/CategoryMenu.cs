@@ -13,13 +13,17 @@ public class CategoryMenu
         AddCategory addCategory = new AddCategory();
         CategoryWithProducts categoryWithProducts = new CategoryWithProducts();
         DisplayAllCat displayAllCat = new DisplayAllCat();
+        EditCatName editCatName = new EditCatName();
 
-	    public Menu()
+        //TODO Add edit and delete.
+
+        public Menu()
 	    {
             Console.WriteLine("1) Display Categories");
             Console.WriteLine("2) Add Category");
             Console.WriteLine("3) Display Category and related products");
             Console.WriteLine("4) Display all Categories and their related products");
+            Console.WriteLine("5) Edit the Category name");
             Console.WriteLine("\"q\" to quit");
             choice = Console.ReadLine();
             Console.Clear();
@@ -42,6 +46,9 @@ public class CategoryMenu
                 case ("4"):
                     displayAllCat.Display();
                     logger.Info("Display all Categories with Products.");
+                break;
+                case ("5"):
+                    editCatName.Edit();
                 break;
                 default:
                     System.Console.WriteLine("Please enter a valid number");
