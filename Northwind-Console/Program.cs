@@ -21,8 +21,27 @@ namespace NorthwindConsole
                 string choice;
                 do
                 {
-                    categoryMenu.Menu();
+                    Console.WriteLine("Which menu would you like to see?");
+                    Console.WriteLine("1) Category"); 
+                    Console.WriteLine("2) Products");
+                    Console.WriteLine("Enter 'q' to quit.");
+                    choice = Console.ReadLine();
 
+                    switch (choice)
+                    {
+                        case ("1"):
+                            categoryMenu.Menu();
+                            logger.Info("Category menu");
+                            break;
+                        case ("2"):
+                            Console.WriteLine("Products");
+                            logger.Info("Products menu");
+                            break;
+                        default:
+                            Console.WriteLine("Please enter a valid choice");
+                            logger.Error("Invaid Selection");
+                            break;
+                    }
                 } while (choice.ToLower() != "q");
             }
             /*catch (DbEntityValidationException e)

@@ -14,8 +14,7 @@ public class CategoryMenu
         CategoryWithProducts categoryWithProducts = new CategoryWithProducts();
         DisplayAllCat displayAllCat = new DisplayAllCat();
         EditCatName editCatName = new EditCatName();
-
-        //TODO Add edit and delete.
+        DeleteCategory deleteCategory = new DeleteCategory();
 
         public Menu()
 	    {
@@ -24,6 +23,7 @@ public class CategoryMenu
             Console.WriteLine("3) Display Category and related products");
             Console.WriteLine("4) Display all Categories and their related products");
             Console.WriteLine("5) Edit the Category name");
+            Console.WriteLine("6) Delete a Category");
             Console.WriteLine("\"q\" to quit");
             choice = Console.ReadLine();
             Console.Clear();
@@ -50,9 +50,13 @@ public class CategoryMenu
                 case ("5"):
                     editCatName.Edit();
                 break;
+                case ("6"):
+                    deleteCategory.Delete();
+                    break;
                 default:
                     System.Console.WriteLine("Please enter a valid number");
                     logger.Error("Invaid Entry.");
+                    break;
             }
         }
     }
