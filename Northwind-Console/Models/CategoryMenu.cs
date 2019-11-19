@@ -8,6 +8,7 @@ using NorthwindConsole.Models;
 
 public class CategoryMenu
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private string choice;
         ViewCategory view = new ViewCategory();
         AddCategory addCategory = new AddCategory();
@@ -16,7 +17,7 @@ public class CategoryMenu
         EditCatName editCatName = new EditCatName();
         DeleteCategory deleteCategory = new DeleteCategory();
 
-        public Menu()
+        public void Menu()
 	    {
             Console.WriteLine("1) Display Categories");
             Console.WriteLine("2) Add Category");

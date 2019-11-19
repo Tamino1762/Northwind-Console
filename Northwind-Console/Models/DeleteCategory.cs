@@ -1,11 +1,19 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
+using System.Data.Entity.Validation;
+using System.Linq;
+using NLog;
+using NorthwindConsole.Models;
 
 
 public class DeleteCategory
 {
-	public Delete()
+    private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+    public void Delete()
 	{
-        var db = new NorthwindContext();
+    var db = new NorthwindContext();
         var query = db.Categories.OrderBy(p => p.CategoryId);
 
         Console.WriteLine("Select the category ID you want to delete:");

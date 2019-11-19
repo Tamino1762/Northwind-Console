@@ -8,7 +8,9 @@ using NorthwindConsole.Models;
 
 public class EditCatName
 {
-	public Edit()
+    private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+    public void Edit()
 	{
         var db = new NorthwindContext();
         var query = db.Categories.OrderBy(p => p.CategoryId);

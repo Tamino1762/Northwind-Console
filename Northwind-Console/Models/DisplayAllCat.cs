@@ -8,7 +8,9 @@ using NorthwindConsole.Models;
 
 public class DisplayAllCat
 {
-	public Display()
+    private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+    public void Display()
 	{
         var db = new NorthwindContext();
         var query = db.Categories.Include("Products").OrderBy(p => p.CategoryId);

@@ -17,7 +17,6 @@ namespace NorthwindConsole
             logger.Info("Program started");
             try
             {
-                CategoryMenu categoryMenu = new CategoryMenu();
                 string choice;
                 do
                 {
@@ -30,6 +29,7 @@ namespace NorthwindConsole
                     switch (choice)
                     {
                         case ("1"):
+                            CategoryMenu categoryMenu = new CategoryMenu();
                             categoryMenu.Menu();
                             logger.Info("Category menu");
                             break;

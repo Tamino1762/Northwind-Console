@@ -9,7 +9,9 @@ using NorthwindConsole.Models;
 
 public class ViewCategory 
 {
-	public Display()
+    private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+    public void Display()
 	{
         var db = new NorthwindContext();
         var query = db.Categories.OrderBy(p => p.CategoryName);

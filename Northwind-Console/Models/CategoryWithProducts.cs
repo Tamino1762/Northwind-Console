@@ -9,7 +9,9 @@ using NorthwindConsole.Models;
 
 public class CategoryWithProducts
 {
-	public View()
+    private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+    public void View()
 	{
         Category category = new Category();
 
