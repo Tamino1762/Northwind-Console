@@ -21,8 +21,8 @@ public class CategoryWithProducts
         category.Description = Console.ReadLine();
 
         var db = new NorthwindContext();
-        db.Categories.Add(category); // added later
-        db.SaveChanges(); //added later
+        db.Categories.Add(category); 
+        db.SaveChanges(); 
 
         foreach (var validationResult in db.GetValidationErrors())
         {

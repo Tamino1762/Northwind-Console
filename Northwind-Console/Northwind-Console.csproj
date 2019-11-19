@@ -70,6 +70,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="bin\Debug\Northwind-Console.exe.config" />
     <None Include="obj\x86\Debug\DesignTimeResolveAssemblyReferencesInput.cache" />
     <None Include="obj\x86\Debug\Northwind-Console.csprojAssemblyReference.cache" />
     <None Include="packages.config" />
@@ -79,9 +80,12 @@
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="bin\Debug\Northwind-Console.exe" />
+    <Content Include="bin\Debug\Northwind-Console.pdb" />
     <Content Include="obj\x86\Debug\Northwind-Console.csproj.FileListAbsolute.txt" />
   </ItemGroup>
   <ItemGroup>
+    <Folder Include="bin\Release\" />
     <Folder Include="obj\x86\Debug\TempPE\" />
     <Folder Include="obj\x86\Release\" />
   </ItemGroup>

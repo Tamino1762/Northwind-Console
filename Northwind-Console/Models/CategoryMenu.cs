@@ -50,9 +50,11 @@ public class CategoryMenu
                 break;
                 case ("5"):
                     editCatName.Edit();
+                    logger.Info("Edit Category");
                 break;
                 case ("6"):
                     deleteCategory.Delete();
+                    logger.Info("Delete Category");
                     break;
                 default:
                     System.Console.WriteLine("Please enter a valid number");
