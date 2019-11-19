@@ -57,6 +57,8 @@
     <Compile Include="Models\AddCategory.cs" />
     <Compile Include="Models\CategoryMenu.cs" />
     <Compile Include="Models\CategoryWithProducts.cs" />
+    <Compile Include="Models\DisplayProducts.cs" />
+    <Compile Include="Models\ProductMenu.cs" />
     <Compile Include="Models\DeleteCategory.cs" />
     <Compile Include="Models\DisplayAllCat.cs" />
     <Compile Include="Models\EditCatName.cs" />
