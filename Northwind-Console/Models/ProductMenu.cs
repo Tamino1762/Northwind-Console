@@ -11,6 +11,7 @@ namespace NorthwindConsole.Models
     //edit a specific record from the products table
     // display all records in the products table(product name only) user decides if they want to see all products, discontinued products, or active (not discontinued) products.  Discontinued products should be distinguished from active products.
     // display a specific product (all products should be displayed
+/**** don't forget to fix the category thing to delete products before a category can be deleted*******/
 /*The book has stuff on queries don't forget*/
 //be sure to use Nlog
     public class ProductMenu

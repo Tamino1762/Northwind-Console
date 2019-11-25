@@ -8,15 +8,16 @@ using NorthwindConsole.Models;
 
 namespace NorthwindConsole.Models
 {
-    class EditProductCategory
+    class EditProductQuantity
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
-        public void EditCategory()
+        public void EditQuantity()
         {
             var db = new NorthwindContext();
             var query = db.Categories.OrderBy(c => c.CategoryId);
             var pQuery = db.Products.OrderBy(p => p.ProductID);
+
             //select product
             Console.WriteLine("Select the Product ID you want to edit:");
             foreach (var item in pQuery)
@@ -25,18 +26,13 @@ namespace NorthwindConsole.Models
             }
             int productId = int.Parse(Console.ReadLine());
             Product product = db.Products.FirstOrDefault(p => p.ProductID == productId);
-            // edit category
-            Console.WriteLine("Select the category ID you want to add the product to:");
-            foreach (var item in query)
-            {
-                Console.WriteLine($"{item.CategoryId}) {item.CategoryName}");
-            }
 
-            int catId = int.Parse(Console.ReadLine());
-            product.CategoryId = catId;
+            Console.WriteLine("Enter the quantity per unit");
+            var quantity = Console.ReadLine();
+            product.QuantityPerUnit = quantity;
             db.SaveChanges();
-            logger.Info($"CategoryId {catId} selected");
-            logger.Info($"Category changed to {catId}.");
+            logger.Info("Quantity changed.");
+
         }
     }
 }

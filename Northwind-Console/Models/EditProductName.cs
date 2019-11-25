@@ -30,7 +30,7 @@ namespace NorthwindConsole.Models
          var name = Console.ReadLine();
          prod.ProductName = name;
          db.SaveChanges();
-         logger.Info("Product Name changed.");
+         logger.Info($"Product Name changed to {name}.");
         }
     }
 }

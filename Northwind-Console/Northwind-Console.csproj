@@ -62,6 +62,11 @@
     <Compile Include="Models\EditProductName.cs" />
     <Compile Include="Models\EditProduct.cs" />
     <Compile Include="Models\DisplayProducts.cs" />
+    <Compile Include="Models\EditProductOrder.cs" />
+    <Compile Include="Models\EditProductPrice.cs" />
+    <Compile Include="Models\EditProductQuantity.cs" />
+    <Compile Include="Models\EditProductReorder.cs" />
+    <Compile Include="Models\EditProductStock.cs" />
     <Compile Include="Models\EditProductSupplier.cs" />
     <Compile Include="Models\ProductMenu.cs" />
     <Compile Include="Models\DeleteCategory.cs" />

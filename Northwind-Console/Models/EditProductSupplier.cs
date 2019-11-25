@@ -42,7 +42,7 @@ namespace NorthwindConsole.Models
             product.SupplierId = int.Parse(Console.ReadLine());
             logger.Info($"SupplierId {product.SupplierId} selected");
             db.SaveChanges();
-            logger.Info("Supplier changed.");
+            logger.Info($"Supplier changed to {product.SupplierId}.");
         }
     }
 }
