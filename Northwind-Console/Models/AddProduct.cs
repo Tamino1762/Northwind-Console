@@ -18,6 +18,8 @@ using NorthwindConsole.Models;
             var query = db.Categories.OrderBy(p => p.CategoryId);
             var sQuery = db.Suppliers.OrderBy(s => s.SupplierId);
 
+            //connect IDs
+            //category
             Console.WriteLine("Select the category ID you want to add a product to:");
             foreach (var item in query)
             {
@@ -42,7 +44,7 @@ using NorthwindConsole.Models;
         product.SupplierId = supplier.SupplierId;
 
         //add product to selected category
-        //s.supplier id = p.supplier id
+   
         Console.WriteLine("Enter the name of the product");
             product.ProductName = Console.ReadLine();
 

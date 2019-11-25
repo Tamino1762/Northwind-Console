@@ -5,6 +5,7 @@ namespace NorthwindConsole.Models
     public class Product
     {
         public int ProductID { get; set; }
+        public object ProductId { get; internal set; }
         public string ProductName { get; set; }
         public string QuantityPerUnit { get; set; }
         public decimal? UnitPrice { get; set; }

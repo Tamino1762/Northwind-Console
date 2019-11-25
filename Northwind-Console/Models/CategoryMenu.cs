@@ -24,7 +24,7 @@ public class CategoryMenu
             Console.WriteLine("3) Display Category and related products");
             Console.WriteLine("4) Display all Categories and their related products");
             Console.WriteLine("5) Edit the Category name");
-            Console.WriteLine("6) Delete a Category");
+            Console.WriteLine("6) Delete a Category");//delete products first?
             Console.WriteLine("\"q\" to quit");
             choice = Console.ReadLine();
             Console.Clear();

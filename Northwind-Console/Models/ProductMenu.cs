@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace NorthwindConsole.Models
 {
-    //add new records to the products table
+
     //edit a specific record from the products table
     // display all records in the products table(product name only) user decides if they want to see all products, discontinued products, or active (not discontinued) products.  Discontinued products should be distinguished from active products.
     // display a specific product (all products should be displayed
@@ -19,15 +19,15 @@ namespace NorthwindConsole.Models
         private string choice;
         DisplayProducts displayProducts = new DisplayProducts();
         AddProduct addProduct = new AddProduct();
+        EditProduct editProduct = new EditProduct();
 
         public void Menu()
         {
-            Console.WriteLine("1) Display Products");
+            Console.WriteLine("1) Display all Products"); //add see active and discontinued products
             Console.WriteLine("2) Add a new Product");
-            Console.WriteLine("3) Display Category and related products");
-            Console.WriteLine("4) Display all Categories and their related products");
-            Console.WriteLine("5) Edit the Product name");
-            Console.WriteLine("6) Delete a Product");
+            Console.WriteLine("3) Edit a Product");
+            Console.WriteLine("4) Display a specific product");
+            Console.WriteLine("5) Delete a Product");
             Console.WriteLine("\"q\" to quit");
             choice = Console.ReadLine();
             Console.Clear();
@@ -40,6 +40,13 @@ namespace NorthwindConsole.Models
                     break;
                 case ("2"):
                     addProduct.Add();
+                    break;
+                case ("3"):
+                    editProduct.Edit();
+                    break;
+                default:
+                    Console.WriteLine("Invalid Entry");
+                    logger.Error("Invalid Entry");
                     break;
             }
         }
