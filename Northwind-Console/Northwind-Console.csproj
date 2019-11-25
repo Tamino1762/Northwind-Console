@@ -54,14 +54,16 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Models\ActiveProducts.cs" />
     <Compile Include="Models\AddCategory.cs" />
     <Compile Include="Models\AddProduct.cs" />
     <Compile Include="Models\CategoryMenu.cs" />
     <Compile Include="Models\CategoryWithProducts.cs" />
+    <Compile Include="Models\DisplayAllProducts.cs" />
+    <Compile Include="Models\DisplayInactive.cs" />
     <Compile Include="Models\EditProductCategory.cs" />
     <Compile Include="Models\EditProductName.cs" />
     <Compile Include="Models\EditProduct.cs" />
-    <Compile Include="Models\DisplayProducts.cs" />
     <Compile Include="Models\EditProductOrder.cs" />
     <Compile Include="Models\EditProductPrice.cs" />
     <Compile Include="Models\EditProductQuantity.cs" />

@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace NorthwindConsole.Models
 {
-    public class DisplayProducts
+    public class DisplayAllProducts
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 
@@ -18,7 +18,7 @@ namespace NorthwindConsole.Models
             Console.WriteLine($"{query.Count()} records returned");
             foreach (var item in query)
             {
-                Console.WriteLine($"{item.ProductName}");
+                Console.WriteLine($"{item.ProductName} || Discontinued: {item.Discontinued}");
             }
         }
         

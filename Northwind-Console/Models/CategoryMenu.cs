@@ -40,7 +40,7 @@ public class CategoryMenu
                     addCategory.Add();
                     logger.Info("Add a Category.");
                 break;
-                case ("3"):
+                case ("3"): //TODO: FIX THIS
                     categoryWithProducts.View();
                     logger.Info("Display Category with Product.");
                 break;

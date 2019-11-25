@@ -18,17 +18,20 @@ namespace NorthwindConsole.Models
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private string choice;
-        DisplayProducts displayProducts = new DisplayProducts();
+        DisplayAllProducts displayAllProducts = new DisplayAllProducts();
+        ActiveProducts activeProducts= new ActiveProducts();
+        DisplayInactive displayInactive = new DisplayInactive();
         AddProduct addProduct = new AddProduct();
         EditProduct editProduct = new EditProduct();
 
         public void Menu()
         {
             Console.WriteLine("1) Display all Products"); //add see active and discontinued products
-            Console.WriteLine("2) Add a new Product");
-            Console.WriteLine("3) Edit a Product");
-            Console.WriteLine("4) Display a specific product");
-            Console.WriteLine("5) Delete a Product");
+            Console.WriteLine("2) Display active Products");
+            Console.WriteLine("3) Display discontinued Products");
+            Console.WriteLine("4) Add a new Product");
+            Console.WriteLine("5) Edit a Product");
+            Console.WriteLine("6) Delete a Product");
             Console.WriteLine("\"q\" to quit");
             choice = Console.ReadLine();
             Console.Clear();
@@ -37,12 +40,18 @@ namespace NorthwindConsole.Models
             switch (choice)
             {
                 case ("1"):
-                    displayProducts.Display();
+                    displayAllProducts.Display();
                     break;
                 case ("2"):
-                    addProduct.Add();
+                    activeProducts.DisplayActive();
                     break;
                 case ("3"):
+                    displayInactive.DisplayNotActive();
+                    break;
+                case ("4"):
+                    addProduct.Add();
+                    break;
+                case ("5"):
                     editProduct.Edit();
                     break;
                 default:
