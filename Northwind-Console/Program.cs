@@ -38,6 +38,9 @@ namespace NorthwindConsole
                             productMenu.Menu();
                             logger.Info("Products menu");
                             break;
+                        case ("q"):
+                            Console.WriteLine("Have a great day!");
+                            break;
                         default:
                             Console.WriteLine("Please enter a valid choice");
                             logger.Error("Invaid Selection");

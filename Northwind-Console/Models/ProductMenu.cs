@@ -21,6 +21,7 @@ namespace NorthwindConsole.Models
         DisplayAllProducts displayAllProducts = new DisplayAllProducts();
         ActiveProducts activeProducts= new ActiveProducts();
         DisplayInactive displayInactive = new DisplayInactive();
+        DisplaySpecificProduct displaySpecificProduct = new DisplaySpecificProduct();
         AddProduct addProduct = new AddProduct();
         EditProduct editProduct = new EditProduct();
 
@@ -29,9 +30,10 @@ namespace NorthwindConsole.Models
             Console.WriteLine("1) Display all Products"); //add see active and discontinued products
             Console.WriteLine("2) Display active Products");
             Console.WriteLine("3) Display discontinued Products");
-            Console.WriteLine("4) Add a new Product");
-            Console.WriteLine("5) Edit a Product");
-            Console.WriteLine("6) Delete a Product");
+            Console.WriteLine("4) Display a specific Product");
+            Console.WriteLine("5) Add a new Product");
+            Console.WriteLine("6) Edit a Product");
+            Console.WriteLine("7) Delete a Product");
             Console.WriteLine("\"q\" to quit");
             choice = Console.ReadLine();
             Console.Clear();
@@ -49,9 +51,12 @@ namespace NorthwindConsole.Models
                     displayInactive.DisplayNotActive();
                     break;
                 case ("4"):
-                    addProduct.Add();
+                    displaySpecificProduct.DisplaySpecific();
                     break;
                 case ("5"):
+                    addProduct.Add();
+                    break;
+                case ("6"):
                     editProduct.Edit();
                     break;
                 default:

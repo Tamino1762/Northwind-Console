@@ -19,6 +19,7 @@ namespace NorthwindConsole.Models
             {
                 Console.WriteLine($"{item.ProductName} || Discontinued: {item.Discontinued = true}");
             }
+            logger.Info("Discontinued products displayed.");
         }
     }
 }
