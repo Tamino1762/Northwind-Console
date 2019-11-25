@@ -62,6 +62,9 @@
     <Compile Include="Models\DisplayAllProducts.cs" />
     <Compile Include="Models\DisplayInactive.cs" />
     <Compile Include="Models\DisplaySpecificProduct.cs" />
+    <Compile Include="Models\EditCatDescr.cs" />
+    <Compile Include="Models\EditCategoryMenu.cs" />
+    <Compile Include="Models\EditCatId.cs" />
     <Compile Include="Models\EditProductCategory.cs" />
     <Compile Include="Models\EditProductName.cs" />
     <Compile Include="Models\EditProduct.cs" />

@@ -7,7 +7,7 @@ using NLog;
 using NorthwindConsole.Models;
 
 
-public class CategoryWithProducts //TODO: FIX THIS!!!
+public class CategoryWithProducts
 {
     private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
 

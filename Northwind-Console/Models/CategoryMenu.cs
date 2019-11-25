@@ -14,16 +14,16 @@ public class CategoryMenu
         AddCategory addCategory = new AddCategory();
         CategoryWithProducts categoryWithProducts = new CategoryWithProducts();
         DisplayAllCat displayAllCat = new DisplayAllCat();
-        EditCatName editCatName = new EditCatName();
+        EditCategoryMenu editCategoryMenu = new EditCategoryMenu();
         DeleteCategory deleteCategory = new DeleteCategory();
 
         public void Menu()
 	    {
             Console.WriteLine("1) Display Categories");
             Console.WriteLine("2) Add Category");
-            Console.WriteLine("3) Display Category and related products");
+            Console.WriteLine("3) Display specific Category and related products");
             Console.WriteLine("4) Display all Categories and their related products");
-            Console.WriteLine("5) Edit the Category name");
+            Console.WriteLine("5) Edit a Category");
             Console.WriteLine("6) Delete a Category");//delete products first?
             Console.WriteLine("\"q\" to quit");
             choice = Console.ReadLine();
@@ -40,7 +40,7 @@ public class CategoryMenu
                     addCategory.Add();
                     logger.Info("Add a Category.");
                 break;
-                case ("3"): //TODO: FIX THIS
+                case ("3"): 
                     categoryWithProducts.View();
                     logger.Info("Display Category with Product.");
                 break;
@@ -49,7 +49,7 @@ public class CategoryMenu
                     logger.Info("Display all Categories with Products.");
                 break;
                 case ("5"):
-                    editCatName.Edit();
+                    editCategoryMenu.Menu();
                     logger.Info("Edit Category");
                 break;
                 case ("6"):

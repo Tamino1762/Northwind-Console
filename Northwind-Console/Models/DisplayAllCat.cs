@@ -13,15 +13,23 @@ public class DisplayAllCat
     public void Display()
 	{
         var db = new NorthwindContext();
-        var query = db.Categories.Include("Products").OrderBy(p => p.CategoryId);
+        var query = db.Products.Where(p => p.Discontinued == false).OrderBy(p => p.CategoryId);
+        var cQuery = db.Categories.OrderBy(c => c.CategoryName);
+        Console.WriteLine($"{query.Count()} records returned");
+
+        Console.WriteLine("Category References:");
+        foreach (var catItem in cQuery)
+        {
+            Console.WriteLine($"Category: {catItem.CategoryId}\t {catItem.CategoryName}");
+        }
+        Console.WriteLine("_________________");
+        Console.WriteLine();
         foreach (var item in query)
         {
-            Console.WriteLine($"{item.CategoryName}");
-            foreach (Product p in item.Products)
-            {
-                Console.WriteLine($"\t{p.ProductName}");
-            }
+            Console.WriteLine($"Category ID: {item.CategoryId}  \nProduct Name: {item.ProductName} || Discontinued: {item.Discontinued}");
         }
+        Console.WriteLine();
+        logger.Info("Categories with active products displayed.");
 
         Console.WriteLine();
     }
