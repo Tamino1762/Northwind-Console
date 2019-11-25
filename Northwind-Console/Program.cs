@@ -34,7 +34,8 @@ namespace NorthwindConsole
                             logger.Info("Category menu");
                             break;
                         case ("2"):
-                            Console.WriteLine("Products");
+                            ProductMenu productMenu = new ProductMenu();
+                            productMenu.Menu();
                             logger.Info("Products menu");
                             break;
                         default:

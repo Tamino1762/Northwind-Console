@@ -21,5 +21,7 @@ public class ViewCategory
         {
             Console.WriteLine($"{item.CategoryName} - {item.Description}");
         }
+
+        logger.Info("Products viewed");
     }
 }

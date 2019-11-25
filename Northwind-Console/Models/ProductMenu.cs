@@ -17,6 +17,8 @@ namespace NorthwindConsole.Models
     {
         private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
         private string choice;
+        DisplayProducts displayProducts = new DisplayProducts();
+        AddProduct addProduct = new AddProduct();
 
         public void Menu()
         {
@@ -34,7 +36,10 @@ namespace NorthwindConsole.Models
             switch (choice)
             {
                 case ("1"):
-                    
+                    displayProducts.Display();
+                    break;
+                case ("2"):
+                    addProduct.Add();
                     break;
             }
         }

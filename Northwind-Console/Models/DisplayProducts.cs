@@ -6,8 +6,21 @@ using System.Threading.Tasks;
 
 namespace NorthwindConsole.Models
 {
-    class DisplayProducts
+    public class DisplayProducts
     {
+        private static NLog.Logger logger = NLog.LogManager.GetCurrentClassLogger();
+
+        public void Display()
+        {
+            var db = new NorthwindContext();
+            var query = db.Products.OrderBy(p => p.ProductName);
+
+            Console.WriteLine($"{query.Count()} records returned");
+            foreach (var item in query)
+            {
+                Console.WriteLine($"{item.ProductName}");
+            }
+        }
         
     }
 }

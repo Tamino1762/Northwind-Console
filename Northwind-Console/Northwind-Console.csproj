@@ -55,6 +55,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Models\AddCategory.cs" />
+    <Compile Include="Models\AddProduct.cs" />
     <Compile Include="Models\CategoryMenu.cs" />
     <Compile Include="Models\CategoryWithProducts.cs" />
     <Compile Include="Models\DisplayProducts.cs" />
