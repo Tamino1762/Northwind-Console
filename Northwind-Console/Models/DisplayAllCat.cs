@@ -22,5 +22,7 @@ public class DisplayAllCat
                 Console.WriteLine($"\t{p.ProductName}");
             }
         }
+
+        Console.WriteLine();
     }
 }

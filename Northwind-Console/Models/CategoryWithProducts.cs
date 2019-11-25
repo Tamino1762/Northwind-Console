@@ -13,27 +13,24 @@ public class CategoryWithProducts //TODO: FIX THIS!!!
 
     public void View()
 	{
-        Category category = new Category();
-
-        Console.WriteLine("Enter Category Name:");
-        category.CategoryName = Console.ReadLine();
-        Console.WriteLine("Enter the Category Description:");
-        category.Description = Console.ReadLine();
-
         var db = new NorthwindContext();
-        db.Categories.Add(category); 
-        db.SaveChanges(); 
-
-        foreach (var validationResult in db.GetValidationErrors())
+        var query = db.Categories.Include("Products").OrderBy(p => p.CategoryId);
+        Console.WriteLine("Select the Category ID you want to view:");
+        foreach (var item in query)
         {
-            foreach (var error in validationResult.ValidationErrors)
-            {
-                logger.Error(
-                    "Entity Property: {0}, Error {1}",
-                    error.PropertyName,
-                    error.ErrorMessage);
-            }
+            Console.WriteLine($"{item.CategoryId}) {item.CategoryName}");
         }
+        int id = int.Parse(Console.ReadLine());
+        logger.Info($"CategoryId {id} selected");
+        Category category = db.Categories.FirstOrDefault(c => c.CategoryId == id);
+        Console.WriteLine($"Category: {category.CategoryName}\nProducts: ");
+
+        foreach (Product p in category.Products)
+        {
+            Console.WriteLine($"  {p.ProductName}");
+        }
+
+        Console.WriteLine();
 
     }
 }
