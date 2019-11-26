@@ -24,7 +24,7 @@ namespace NorthwindConsole.Models
             logger.Info($"Product Id {productId} selected");
             Product product = db.Products.FirstOrDefault(p => p.ProductID == productId);
             Console.WriteLine($"Product: ID: " +
-                              $"{product.ProductID} Name: {product.ProductName}\nCategory: {product.CategoryId}\nSupplier: {product.SupplierId}\nQuantity per unit: {product.QuantityPerUnit}\nUnit Price ${product.UnitPrice}\nUnits in Stock: {product.UnitsInStock}\nUnits on Order: {product.UnitsOnOrder}\nReorder Level {product.ReorderLevel}\nDiscontinued: {product.Discontinued}");
+                              $"{product.ProductID} Name: {product.ProductName}\nCategory: {product.CategoryId}\nSupplier: {product.SupplierId}\nQuantity per unit: {product.QuantityPerUnit}\nUnit Price ${product.UnitPrice}\nUnits in Stock: {product.UnitsInStock}\nUnits on Order: {product.UnitsOnOrder}\nReorder Level: {product.ReorderLevel}\nDiscontinued: {product.Discontinued}");
             Console.WriteLine("_______________________________________________________________");
         }
     }
