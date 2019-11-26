@@ -24,46 +24,58 @@ namespace NorthwindConsole.Models
         DisplaySpecificProduct displaySpecificProduct = new DisplaySpecificProduct();
         AddProduct addProduct = new AddProduct();
         EditProduct editProduct = new EditProduct();
+        DeleteProduct deleteProduct = new DeleteProduct();
 
         public void Menu()
         {
-            Console.WriteLine("1) Display all Products"); //add see active and discontinued products
-            Console.WriteLine("2) Display active Products");
-            Console.WriteLine("3) Display discontinued Products");
-            Console.WriteLine("4) Display a specific Product");
-            Console.WriteLine("5) Add a new Product");
-            Console.WriteLine("6) Edit a Product");
-            Console.WriteLine("7) Delete a Product");
-            Console.WriteLine("\"q\" to quit");
-            choice = Console.ReadLine();
-            Console.Clear();
-            logger.Info($"Option {choice} selected");
-
-            switch (choice)
+            do
             {
-                case ("1"):
-                    displayAllProducts.Display();
-                    break;
-                case ("2"):
-                    activeProducts.DisplayActive();
-                    break;
-                case ("3"):
-                    displayInactive.DisplayNotActive();
-                    break;
-                case ("4"):
-                    displaySpecificProduct.DisplaySpecific();
-                    break;
-                case ("5"):
-                    addProduct.Add();
-                    break;
-                case ("6"):
-                    editProduct.Edit();
-                    break;
-                default:
-                    Console.WriteLine("Invalid Entry");
-                    logger.Error("Invalid Entry");
-                    break;
-            }
+                Console.WriteLine("1) Display all Products"); //add see active and discontinued products
+                Console.WriteLine("2) Display active Products");
+                Console.WriteLine("3) Display discontinued Products");
+                Console.WriteLine("4) Display a specific Product");
+                Console.WriteLine("5) Add a new Product");
+                Console.WriteLine("6) Edit a Product");
+                Console.WriteLine("7) Delete a Product");
+                Console.WriteLine("\"q\" to go back to the main menu");
+
+                choice = Console.ReadLine().ToLower();
+                Console.Clear();
+                logger.Info($"Option {choice} selected");
+
+                switch (choice)
+                {
+                    case ("1"):
+                        displayAllProducts.Display();
+                        break;
+                    case ("2"):
+                        activeProducts.DisplayActive();
+                        break;
+                    case ("3"):
+                        displayInactive.DisplayNotActive();
+                        break;
+                    case ("4"):
+                        displaySpecificProduct.DisplaySpecific();
+                        break;
+                    case ("5"):
+                        addProduct.Add();
+                        break;
+                    case ("6"):
+                        editProduct.Edit();
+                        break;
+                    case ("7"):
+                        deleteProduct.Delete();
+                        break;
+                    case ("q"):
+                        Console.WriteLine("Main Menu");
+                        break;
+                    default:
+                        Console.WriteLine("Invalid Entry");
+                        logger.Error("Invalid Entry");
+                        Menu();
+                        break;
+                }
+            } while (choice != "q");
         }
     }
 }
