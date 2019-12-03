@@ -38,10 +38,12 @@ public class DeleteCategory
                 if (choice == "1")
                 {
                     editProductCategory.EditCategory();
+                    logger.Info("Edit product chosen");
                 }
                 else
                 {
                     deleteProduct.Delete();
+                    logger.Info("Delete product chosen.");
                 }
 
         }
