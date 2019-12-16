@@ -32,7 +32,7 @@ public class DeleteCategory
             Console.WriteLine("You must first update or delete the products in the category you wish to delete");
             
                 Console.WriteLine("Please choose an action");
-                Console.WriteLine("1) Edit product category");
+                Console.WriteLine("1) Edit product category"); 
                 Console.WriteLine("2) Delete a product");
                 var choice = Console.ReadLine();
                 if (choice == "1")
